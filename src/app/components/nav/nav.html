@@ -1,0 +1,21 @@
+<nav id="nav">
+    <div class="logo">
+        <a routerLink="/home"><img src="assets/images/Logo.png" alt="DeCasa" width="200" height="100"></a>
+    </div>
+
+    <button class="hamburger" [class.open]="menuAbierto()" (click)="toggleMenu()" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="menu-overlay" [class.active]="menuAbierto()" (click)="cerrarMenu()"></div>
+
+    <div class="menu-links" [class.open]="menuAbierto()">
+        <a routerLink="/home" routerLinkActive="active" (click)="cerrarMenu()">Inicio</a>
+        <a routerLink="/categoria/1" routerLinkActive="active" (click)="cerrarMenu()">Descanso</a>
+        <a routerLink="/categoria/2" routerLinkActive="active" (click)="cerrarMenu()">Sala</a>
+        <a routerLink="/categoria/3" routerLinkActive="active" (click)="cerrarMenu()">Comedor</a>
+        <a routerLink="/categoria/4" routerLinkActive="active" (click)="cerrarMenu()">Trabajo y Decoracion</a>
+    </div>
+</nav>
